@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="536.0" prefWidth="710.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TableTennis.FXMLController">
+   <children>
+      <TabPane layoutY="-2.0" prefHeight="542.0" prefWidth="710.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Admin page">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label contentDisplay="CENTER" layoutX="25.0" layoutY="37.0" prefHeight="46.0" prefWidth="160.0" text="Enter a new team" />
+                        <TextField fx:id="team_textfield" layoutX="192.0" layoutY="47.0" prefHeight="26.0" prefWidth="303.0" />
+                        <Button fx:id="addTeamButton" layoutX="532.0" layoutY="47.0" mnemonicParsing="false" onAction="#addTeam" prefHeight="19.0" prefWidth="102.0" text="Add team" />
+                        <Label contentDisplay="CENTER" layoutX="17.0" layoutY="120.0" prefHeight="46.0" prefWidth="210.0" text="Enter the name of the new player" />
+                        <TextField fx:id="player_textfield" layoutX="270.0" layoutY="131.0" />
+                        <ComboBox fx:id="combobox" layoutX="468.0" layoutY="131.0" prefWidth="150.0" promptText="select team" />
+                        <Button fx:id="addPlayerButton" layoutX="468.0" layoutY="177.0" mnemonicParsing="false" onAction="#addPlayer" prefHeight="19.0" prefWidth="102.0" text="Register player" />
+                        <Label contentDisplay="CENTER" layoutX="17.0" layoutY="247.0" prefHeight="46.0" prefWidth="285.0" text="This will generate a match between all teams." />
+                        <Label contentDisplay="CENTER" layoutX="14.0" layoutY="282.0" prefHeight="46.0" prefWidth="335.0" text="Warning: all pre-existing match information will be removed." />
+                        <Button layoutX="468.0" layoutY="305.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="127.0" text="Generate fixtures" />
+                        <Label contentDisplay="CENTER" layoutX="17.0" layoutY="382.0" prefHeight="46.0" prefWidth="366.0" text="The stats report will be geenerated automatcially every xxx second." />
+                        <Label contentDisplay="CENTER" layoutX="17.0" layoutY="428.0" prefHeight="46.0" prefWidth="335.0" text="You can also generate it by click the button on the right." />
+                        <Button layoutX="470.0" layoutY="415.0" mnemonicParsing="false" text="Generate team stats" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Viewer page">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button layoutX="14.0" layoutY="26.0" mnemonicParsing="false" text="View fixture and result chart" />
+                        <Button layoutX="14.0" layoutY="83.0" mnemonicParsing="false" text="Show all team stats" />
+                        <Button layoutX="14.0" layoutY="138.0" mnemonicParsing="false" text="Show all team ranking" />
+                        <Button layoutX="11.0" layoutY="193.0" mnemonicParsing="false" text="View a match scores" />
+                        <TextField layoutX="274.0" layoutY="8.0" prefHeight="497.0" prefWidth="418.0" />
+                        <TabPane layoutX="306.0" layoutY="26.0" prefHeight="481.0" prefWidth="380.0" tabClosingPolicy="UNAVAILABLE">
+                          <tabs>
+                            <Tab text="Icon/Text Button">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="414.0" prefWidth="366.0">
+                                       <children>
+                                          <TableView fx:id="tableView" editable="true" layoutX="10.0" layoutY="14.0" prefHeight="372.0" prefWidth="338.0" AnchorPane.bottomAnchor="65.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="32.0" AnchorPane.topAnchor="14.0">
+                                            <columns>
+                                              <TableColumn fx:id="team1" prefWidth="82.4000244140625" text="Team" />
+                                              <TableColumn fx:id="Uwe" prefWidth="68.800048828125" text="Uwe" />
+                                                <TableColumn fx:id="Page" prefWidth="62.4000244140625" text="Page" />
+                                                <TableColumn fx:id="Kcc" prefWidth="64.7999267578125" text="Kcc" />
+                                                <TableColumn fx:id="Filton" prefWidth="52.800048828125" text="Filton" />
+                                            </columns>
+                                          </TableView>
+                                          <TextField fx:id="teamName" layoutX="14.0" layoutY="357.0" prefHeight="26.0" prefWidth="69.0" promptText="name" />
+                                          <TextField fx:id="score1" layoutX="95.0" layoutY="357.0" prefHeight="26.0" prefWidth="53.0" promptText="score" />
+                                          <TextField fx:id="score3" layoutX="231.0" layoutY="357.0" prefHeight="26.0" prefWidth="53.0" promptText="score" />
+                                          <TextField fx:id="score2" layoutX="164.0" layoutY="357.0" prefHeight="26.0" prefWidth="54.0" promptText="score" />
+                                          <TextField fx:id="score4" layoutX="299.0" layoutY="357.0" prefHeight="26.0" prefWidth="44.0" promptText="score" />
+                                          <Button layoutX="301.0" layoutY="404.0" mnemonicParsing="false" text="Add" />
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                          </tabs>
+                        </TabPane>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Score Sheet">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
